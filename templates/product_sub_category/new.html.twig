@@ -1,0 +1,23 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}New ProductSubCategory{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm"> <!-- Ajout d'une ombre pour plus de profondeur -->
+                <div class="card-header bg-info text-white"> <!-- Utilisation de couleurs pour distinguer la tête de carte -->
+                    Create New ProductSubCategory
+                </div>
+                <div class="card-body">
+                    {{ include('product_sub_category/_form.html.twig') }}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{{ path('app_product_sub_category_index') }}" class="btn btn-outline-info">Back to list</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

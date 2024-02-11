@@ -1,0 +1,27 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Edit ProductCategory{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm"> <!-- Ajout d'une ombre pour plus de profondeur -->
+                <div class="card-header bg-primary text-white"> <!-- Utilisation de couleurs pour distinguer la tête de carte -->
+                    Edit Product Category
+                </div>
+                <div class="card-body">
+                    {{ include('product_category/_form.html.twig', {'button_label': 'Update'}) }}
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{{ path('app_product_category_index') }}" class="btn btn-light border">Back to list</a> <!-- Bouton plus subtil -->
+                    {{ include('product_category/_delete_form.html.twig', {
+                        'submit_class': 'btn btn-danger',
+                        'submit_label': 'Delete'
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
